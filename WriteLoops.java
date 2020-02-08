@@ -126,9 +126,11 @@ public class WriteLoops {
 
                 // calling
             for (int i = 5; i < 105; i++) {
-              w = w + 1;
+
               if (w > 51) {
-                System.out.println("Hellow Zipcode");
+                System.out.println("Hello Zipcode");
+              } else {
+                w = w + 1;
               }
             }
 
@@ -160,11 +162,16 @@ public class WriteLoops {
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
+        while (!gpsCurrentLocation().equals("Home")) {
+          driveSomeMore();
+          w = w + 1;
+      }
+        System.out.println("Honey, I'm Home!");
 
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+            //w = w + 1
             // each time through the inner loop
 
 
